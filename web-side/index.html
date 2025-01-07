@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
+  <title>Sistema Judiciario</title>
+</head>
+<body>
+  <div class='container-busca'>
+    <div class='title-busca'>SISTEMA DE INFORMAÇÕES JUDICIÁRIAS</div>
+    <div class='busca'>
+      <input 
+      id='input-busca' 
+      class='input-busca' 
+      placeholder="PASSAPORTE" 
+      maxlength="4" 
+      oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+    />
+      <button class='button-busca' onClick="buscar()">BUSCAR</button>
+    </div>
+    <!-- <div class="loading-container">
+      <div class="spinner"></div>
+    </div> -->
+    </div>
+  </div>
+
+  <div class='container-info-nil'>
+    <div class='title-info-nil'>
+      <p>USUARIO NÃO ENCONTRADO!</p>
+    </div>
+  </div>
+  <div class='principal'>
+    <div class='container-info'>
+      <div class='title-info'>INFORMAÇÕES</div>
+      <div class='table-info'>
+        <div class='info'>
+          <p>NOME</p><span>TESTE FILHO</span>
+          <p>PASSAPORTE</p><span>1138</span>
+        </div>
+
+        <div class='table-result'>
+          <div class='req-info'>PORTE DE ARMA</div>
+          <div class='status-info' id='arma'><span>SIM</span></div>
+        </div>
+        <div class='table-result'>
+          <div class='req-info'>LICENÇA AÉREA</div>
+          <div class='status-info' id='aerea'><span>NÃO</span></div>
+        </div>
+        <div class='table-result'>
+          <div class='req-info'>RÉU PRIMÁRIO</div>
+          <div class='status-info' id='reu'><span>NÃO</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
